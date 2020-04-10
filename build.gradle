@@ -1,28 +1,28 @@
-plugins {
-    id 'org.springframework.boot' version '2.2.2.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-    id 'java'
+buildscript {
+    ext {
+        springBootVersion = "2.0.6.RELEASE"
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+    }
 }
-
+plugins {
+    id "java"
+}
+apply plugin: 'org.springframework.boot'
 repositories {
     mavenCentral()
 }
-
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    testImplementation('org.springframework.boot:spring-boot-starter-test') {
-        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-    }
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.2.2.RELEASE'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.2.2.RELEASE'
 }
-
-test {
-    useJUnitPlatform()
-}
-
 bootRun.environment([
-        "WELCOME_MESSAGE": "hello",
+     "WELCOME_MESSAGE": "hello",
 ])
-
 test.environment([
-        "WELCOME_MESSAGE": "Hello from test",
+     "WELCOME_MESSAGE": "Hello from test",
 ])
