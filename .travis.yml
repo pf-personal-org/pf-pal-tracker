@@ -1,22 +1,21 @@
 language: java
-jdk: 
-- openjdk8
+jdk: openjdk8
 notifications: 
 email: pforsthoff@gmail.com
 cache: npm
 
 before_install:
-install:
+install: true
 before_script:
 script:
-gradle build
+  - ./gradlew build --scan -s
 after_success:
 after_failure:
 after_script:
 before_deploy:
 deploy:
-provider: pages
-skip-cleanup: true
+provider: releases
+skip_cleanup: true
 github-token: $GITHUB_TOKEN
 on:
   branch: master
