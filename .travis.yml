@@ -8,7 +8,7 @@ before_install:
 install: true
 before_script:
 script:
-  - ./gradlew build --scan -s --warning-mode=all
+  - ./gradlew build --warning-mode=all
 after_success:
 after_failure:
 after_script:
