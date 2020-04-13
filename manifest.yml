@@ -2,7 +2,13 @@
 applications:
 - name: pf-pal-tracker
   path: build/libs/pal-tracker.jar
-  random-route: true
+  routes:
+  - route: pf-pal-tracker.cfapps.io
   env:
-    WELCOME_MESSAGE: Hello from Cloud Foundry
+    WELCOME_MESSAGE: Hello from the Cloud Foundry review environment
+    CF_API_URL: https://api.run.pivotal.io/
+    CF_ORG: pf-dell-org
+    CF_SPACE: development
+    CF_USERNAME: paul.forsthoff@dell.com    
+    CF_PASSWORD: ZAQ!2wsx
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
