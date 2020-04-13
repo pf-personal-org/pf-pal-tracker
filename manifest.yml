@@ -5,7 +5,7 @@ applications:
   routes:
   - route: pf-pal-tracker.cfapps.io
   env:
-    WELCOME_MESSAGE: Hello from the Cloud Foundry review environment
+    WELCOME_MESSAGE: Hello from the Cloud Foundry dev environment
     CF_API_URL: https://api.run.pivotal.io/
     CF_ORG: pf-dell-org
     CF_SPACE: development
