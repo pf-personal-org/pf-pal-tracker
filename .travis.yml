@@ -1,6 +1,8 @@
-language: node_js
-node_js: 
--stable
+language: java
+jdk: 
+- openjdk8
+notifications: 
+email: pforsthoff@gmail.com
 cache: npm
 
 before_install:
@@ -9,8 +11,7 @@ install:
 
 before_script:
 script:
--npm test
--npm run build
+gradle build
 after_success:
 after_failure:
 after_script:
