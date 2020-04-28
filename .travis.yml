@@ -3,7 +3,10 @@ jdk: openjdk8
 notifications: 
 email: pforsthoff@gmail.com
 cache: npm
-
+env:
+  global:
+    - CF_API_URL: https://pf-pal-tracker-dev.cfapps.io
+  
 before_install:
 install: true
 before_script:
