@@ -7,7 +7,7 @@ applications:
   env:
     WELCOME_MESSAGE: Hello from the Cloud Foundry dev environment
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
-    CF_API_URL: https://pf-pal-tracker-dev.cfapps.io
+    CF_API_URL: https://Api.run.pivotal.io
     CF_ORG: pf-dell-org
     CF_SPACE: development
     CF_USERNAME: paul.forsthoff@dell.com

@@ -5,7 +5,7 @@ email: pforsthoff@gmail.com
 cache: npm
 env:
   global:
-    - CF_API_URL: https://pf-pal-tracker-dev.cfapps.io
+    - CF_API_URL: https://Api.run.pivotal.io
   
 before_install:
 install: true
@@ -17,6 +17,13 @@ after_failure:
 after_script:
 before_deploy:
 deploy:
+ 	provider: cloudfoundry
+ 	api: $CF_API_URL
+ 	username: $CF_USERNAME
+ 	password: $CF_PASSWORD
+ 	organization: $CF_ORG
+ 	space: $CF_SPACE
+
 provider: releases
 skip_cleanup: true
 github-token: $GITHUB_TOKEN
