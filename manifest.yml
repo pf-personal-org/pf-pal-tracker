@@ -11,5 +11,5 @@ applications:
     CF_ORG: pf-dell-org
     CF_SPACE: development
     CF_USERNAME: paul.forsthoff@dell.com
-    CF:PASSWORD: ZAQ!2wsx
+    CF_PASSWORD: ZAQ!2wsx
 
