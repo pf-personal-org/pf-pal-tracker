@@ -3,9 +3,6 @@ jdk: openjdk8
 notifications: 
 email: pforsthoff@gmail.com
 cache: npm
-env:
-  global:
-    - CF_API_URL: https://Api.run.pivotal.io
   
 before_install:
 install: true
